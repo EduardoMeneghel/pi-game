@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="ngGame">
+  <head>
+    <meta charset="UTF-8" name="viewport" content="user-scalable=no">
+    <title>PI GAME</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/angularjs/gameController"></script>
+  </head>
+  <body ng-controller="ngGameController" ng-keydown="keyPress($event)">
+    <p class="message" style="background-color: blueviolet;">Proximas posições: {{next}}</p>
+    <p class="message" style="background-color: aquamarine;">Seu record é de {{record}}</p>
+    <p class="message" style="background-color: deeppink;">Sua pontuação é de {{score}}</p>
+    <p class="message" style="background-color: red;">Life {{life}}</p>
+    <p class="message" style="background-color: deepskyblue;">{{value}}</p>
+    <main class="game" style="margin-top: 100px;">
+      <div class="row">
+        <div class="col square" ng-click="game('7')">
+          <p class="font-game">7</p>
+        </div>
+        <div class="col square" ng-click="game('8')">
+          <p class="font-game">8</p>
+        </div>
+        <div class="col square" ng-click="game('9')">
+          <p class="font-game">9</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col square" ng-click="game('4')">
+          <p class="font-game">4</p>
+        </div>
+        <div class="col square" ng-click="game('5')">
+          <p class="font-game">5</p>
+        </div>
+        <div class="col square" ng-click="game('6')">
+          <p class="font-game">6</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col square" ng-click="game('1')">
+          <p class="font-game">1</p>
+        </div>
+        <div class="col square" ng-click="game('2')">
+          <p class="font-game">2</p>
+        </div>
+        <div class="col square" ng-click="game('3')">
+          <p class="font-game">3</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col square" ng-click="game('0')">
+          <p class="font-game">0</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
