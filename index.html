@@ -10,12 +10,10 @@
     <script src="./js/angular.min.js"></script>
     <script src="./js/angularjs/gameController"></script>
   </head>
-  <body ng-controller="ngGameController" ng-keydown="keyPress($event)">
-    <p class="message" style="background-color: blueviolet;">Proximas posições: {{next}}</p>
-    <p class="message" style="background-color: aquamarine;">Seu record é de {{record}}</p>
-    <p class="message" style="background-color: deeppink;">Sua pontuação é de {{score}}</p>
-    <p class="message" style="background-color: red;">Life {{life}}</p>
-    <p class="message" style="background-color: deepskyblue;">{{value}}</p>
+  <body ng-controller="ngGameController" ng-keydown="keyPress($event)" style="background-color: {{color}};">
+    <p class="message">RECORD: {{record}}  SCORE: {{score}}</p>
+    <p class="message">{{life}}</p>
+    <p class="message">{{value}}</p><p class="message">{{next}}</p>
     <main class="game" style="margin-top: 100px;">
       <div class="row">
         <div class="col square" ng-click="game('7')">
