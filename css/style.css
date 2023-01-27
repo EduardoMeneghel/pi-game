@@ -58,6 +58,13 @@ body{
     border-radius: 15px;
 }
 
+@media (min-width: 1001px)
+{
+    .game{
+        display: none;
+    }
+}
+
 .message{
     color: white; 
     font-size: 5rem; 
