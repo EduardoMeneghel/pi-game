@@ -12,8 +12,9 @@
   </head>
   <body ng-controller="ngGameController" ng-keydown="keyPress($event)" style="background-color: {{color}};">
     <p class="message">RECORD: {{record}}  SCORE: {{score}}</p>
+    <p class="message" style="color: white;">{{next}}</p>
     <p class="message">{{life}}</p>
-    <p class="message">{{value}}</p><p class="message">{{next}}</p>
+    <p class="message">{{value}}</p>
     <main class="game" style="margin-top: 100px;">
       <div class="row">
         <div class="col square" ng-click="game('7')">

@@ -16,6 +16,7 @@
     }
     $scope.game = function(key){
       if($scope.numbers.includes(key)){
+        $scope.next = '';
         if($scope.pi.substring($scope.position,$scope.position+1) == key){
           $scope.position = $scope.position+1;
           $scope.value = $scope.value + key;
@@ -29,7 +30,7 @@
           }
         }else{
           if($scope.life == ""){
-            $scope.next = $scope.pi.substring($scope.position,$scope.position+6);
+            $scope.next = "NEXT NUMBERS: "+$scope.pi.substring($scope.position,$scope.position+6);
             reset();
           }else{
             $scope.life = $scope.life.substr(0, $scope.life.length - 2);
@@ -45,7 +46,6 @@
       $scope.score = 0;
       $scope.color = '#101010';
       alert('gameover');
-      $scope.next = "";
     }
   });
 })(window.angular);
